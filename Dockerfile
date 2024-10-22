@@ -4,7 +4,8 @@ ENV VERIBLE_URL=https://github.com/chipsalliance/verible/releases/download/v0.0-
 
 RUN apk add --no-cache \
     wget \
-    tar
+    tar \
+    bash
 
 RUN mkdir -p /opt/verible && \
     wget -O /tmp/verible.tar.gz $VERIBLE_URL && \
