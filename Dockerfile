@@ -13,7 +13,7 @@ RUN mkdir -p /opt/verible && \
 
 ENV PATH="/opt/verible/bin:$PATH"
 
-COPY verible-wrap.sh /tmp
-RUN chmod +x /tmp/verible-wrap.sh
+COPY verible-wrapper.sh /tmp
+RUN chmod +x /tmp/verible-wrapper.sh
 
-CMD [ "/tmp/verible-wrap.sh" ]
+CMD [ "bash", "/tmp/verible-wrapper.sh" ]
