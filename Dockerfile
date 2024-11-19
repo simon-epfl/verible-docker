@@ -1,11 +1,14 @@
 FROM ubuntu:latest
 
 ENV VERIBLE_URL=https://github.com/chipsalliance/verible/releases/download/v0.0-3836-g86ee9bab/verible-v0.0-3836-g86ee9bab-linux-static-x86_64.tar.gz
-
+    
 RUN apt-get update && apt-get install -y \
     wget \
     tar \
     bash \
+    libdw-dev \
+    libelf-dev \
+    git cmake build-essential \
     && rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p /opt/verible && \
