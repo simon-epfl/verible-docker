@@ -6,9 +6,6 @@ RUN apt-get update && apt-get install -y \
     wget \
     tar \
     bash \
-    libdw-dev \
-    libelf-dev \
-    git cmake build-essential \
     && rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p /opt/verible && \
